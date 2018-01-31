@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
+
+/* Services Div Underline */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  transition: all .1s ease-in;
+}
+.hvr-underline-from-center:hover{background: #ece2ff;}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #f0effe; /*#dfc0ff*/
+  height: 100%;/*2px*/
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+/* Typed Cursor Blink*/
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  }
+  @keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+  }
+  @-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+  }
+  @-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/*Typed Style*/
+#typed {
+  color: #c6b9ff;
+  text-shadow: 2px 2px 2px #2f16b8;
+}
+
+
+/* Typeface */
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../fonts/typeface/Geomanist-Black.eot');
+  src: url('../fonts/typeface/Geomanist-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/typeface/Geomanist-Black.woff2') format('woff2'),
+      url('../fonts/typeface/Geomanist-Black.woff') format('woff'),
+      url('../fonts/typeface/Geomanist-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Butler';
+  src: url('../fonts/typeface/Butler-Bold.eot');
+  src: url('../fonts/typeface/Butler-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/typeface/Butler-Bold.woff2') format('woff2'),
+      url('../fonts/typeface/Butler-Bold.woff') format('woff'),
+      url('../fonts/typeface/Butler-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans 900';
+  src: url('../fonts/typeface/MuseoSans-900.woff2') format('woff2'),
+      url('../fonts/typeface/MuseoSans-900.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('../fonts/typeface/BrandonGrotesque-Bold.woff2') format('woff2'),
+      url('../fonts/typeface/BrandonGrotesque-Bold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('../fonts/typeface/BrandonGrotesque-Regular.woff2') format('woff2'),
+      url('../fonts/typeface/BrandonGrotesque-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../fonts/typeface/SourceCodePro-Medium.woff2') format('woff2'),
+      url('../fonts/typeface/SourceCodePro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/typeface/FuturaPT-Bold.woff2') format('woff2'),
+      url('../fonts/typeface/FFuturaPT-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Animations */
+
+/* Body FadeIn */
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    /*transform: translateY(15px);*/
+  }
+
+  100% {
+    opacity: 1;
+    /*transform: translateY(0);*/
+  }
+}
+
+@keyframes noFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes noFadeOut {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 1;
+    transform: translateY(15px);/*scale(0.97)*/
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Not used*/
+@keyframes laydown {
+  0% {
+     height: 10px;
+  }
+  30%, 100% {
+     width: 100%;
+    height: 10px;
+  }
+  100% {
+   height: 600px;
+  }
+}
+
+@keyframes _rotate{
+  from {transform: rotate(0deg)}
+    to {transform: rotate(180deg)}
+}
